@@ -42,6 +42,7 @@ body{
 
 .header-right{
   border-left: 2px solid lightgray;
+  margin-bottom: 20px;
 }
 
 .my-account, .icons-left, .opened-chat, .icons-right{
@@ -166,6 +167,41 @@ body{
 .info span, .last-seen span{
   font-size: .9rem;
   color: #b1b1b1;
+}
+
+
+/*chat aperta*/
+.chat{
+  overflow-y: scroll;
+  height: calc(100% - 120px);
+}
+
+.message{
+  padding: 5px 10px;
+  font-size: .9rem;
+  border-radius: 8px;
+  margin: 10px 5%;
+  min-width: 100px;
+}
+
+.message span{
+  font-size: .7rem;
+  color: #b1b1b1;
+  float: right;
+}
+
+.message p{
+  margin: 7px 0;
+}
+
+.message.message-sent{
+  background-color: #d5f9ba;
+  float: right;
+}
+
+.message.message-received{
+  background-color: white;
+  float: left;
 }
 
 /*scrivi un messaggio*/
