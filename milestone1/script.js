@@ -5,31 +5,30 @@ createApp({
     return{
       contacts: [
         {
-        name: 'Michele',
-        avatar: '_1',
-        visible: true,
-        messages: [
-        {
-        date: '10/01/2020 15:30:55',
-        message: 'Hai portato a spasso il cane?',
-        status: 'sent'
-        },
-        {
-        date: '10/01/2020 15:50:00',
-        message: 'Ricordati di stendere i panni',
-        status: 'sent'
-        },
-        {
-        date: '10/01/2020 16:15:22',
-        message: 'Tutto fatto!',
-        status: 'received'
-        }
-        ],
+          name: 'Michele',
+          avatar: '_1',
+          visible: true,
+          messages: [
+            {
+              date: '10/01/2020 15:30:55',
+              message: 'Hai portato a spasso il cane?',
+              status: 'sent'
+            },
+            {
+              date: '10/01/2020 15:50:00',
+              message: 'Ricordati di stendere i panni',
+              status: 'sent'
+            },
+            {
+              date: '10/01/2020 16:15:22',
+              message: 'Tutto fatto!',
+              status: 'received'
+            }
+          ],
         },
         {
         name: 'Fabio',
-        path: 'img/avatar',
-        avatar: '_2.jpg',
+        avatar: '_2',
         visible: true,
         messages: [
         {
@@ -51,8 +50,7 @@ createApp({
         },
         {
         name: 'Samuele',
-        path: 'img/avatar',
-        avatar: '_3.jpg',
+        avatar: '_3',
         visible: true,
         messages: [
         {
@@ -74,8 +72,7 @@ createApp({
         },
         {
         name: 'Alessandro B.',
-        path: 'img/avatar',
-        avatar: '_4.jpg',
+        avatar: '_4',
         visible: true,
         messages: [
         {
@@ -92,8 +89,7 @@ createApp({
         },
         {
         name: 'Alessandro L.',
-        path: 'img/avatar',
-        avatar: '_5.jpg',
+        avatar: '_5',
         visible: true,
         messages: [
         {
@@ -110,8 +106,7 @@ createApp({
         },
         {
         name: 'Claudia',
-        path: 'img/avatar',
-        avatar: '_io.jpg',
+        avatar: '_io',
         visible: true,
         messages: [
         {
@@ -133,8 +128,7 @@ createApp({
         },
         {
         name: 'Federico',
-        path: 'img/avatar',
-        avatar: '_7.jpg',
+        avatar: '_7',
         visible: true,
         messages: [
         {
@@ -151,8 +145,7 @@ createApp({
         },
         {
         name: 'Davide',
-        path: 'img/avatar',
-        avatar: '_8.jpg',
+        avatar: '_8',
         visible: true,
         messages: [
         {
@@ -173,7 +166,6 @@ createApp({
         ],
         }
       ],
-      activeContact : 0,
 
     }
   }

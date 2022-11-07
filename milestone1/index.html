@@ -61,24 +61,17 @@
       <!-- lista delle chat -->
       <div class="chat-list">
         <ul>
-          <!-- anteprima chat da modificare e rendere dinamica!!! 
-          <li>
-            <div class="contact">
-              <img src="img/avatar_2.jpg" alt="nome">
-              <div class="info">
-                <h4>Niccolò</h4>
-                <span>Ultimo messaggio inviato</span>
-              </div>
-            </div> 
-          </li>-->
 
           <li v-for="(contact, index) in contacts">
-            <img :src="contacts.path + avatar" :alt="contact.name">
-            <div class="info">
-              <h4>{{contact.name}}</h4>
-              <span>{{contact.messages.message}}</span>
+            <div class="contact">
+              <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
+              <div class="info">
+               <h4>{{contact.name}}</h4>
+               <span>{{contact.messages[contact.messages.length-1].message}}</span>
+              </div>
+            
               <div class="last-seen">
-                <span>{{contact.messages.date}}</span>
+                <span>{{contact.messages[0].date}}</span>
               </div>
             </div>
             
