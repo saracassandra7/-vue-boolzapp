@@ -14,7 +14,7 @@
   <title>Boolzapp</title>
 </head>
 <body>
-  <div class="container">
+  <div id="app" class="container">
     <!-- menu chat a sinistra -->
     <div class="left">
 
@@ -61,7 +61,7 @@
       <!-- lista delle chat -->
       <div class="chat-list">
         <ul>
-          <!-- anteprima chat da modificare e rendere dinamica!!! -->
+          <!-- anteprima chat da modificare e rendere dinamica!!! 
           <li>
             <div class="contact">
               <img src="img/avatar_2.jpg" alt="nome">
@@ -69,13 +69,21 @@
                 <h4>Niccolò</h4>
                 <span>Ultimo messaggio inviato</span>
               </div>
-            </div>
+            </div> 
+          </li>-->
 
-            <div class="last-seen">
-              <span>12:00</span>
+          <li v-for="(contact, index) in contacts">
+            <img :src="contacts.path + avatar" :alt="contact.name">
+            <div class="info">
+              <h4>{{contact.name}}</h4>
+              <span>{{contact.messages.message}}</span>
+              <div class="last-seen">
+                <span>{{contact.messages.date}}</span>
+              </div>
             </div>
+            
           </li>
-          
+
         </ul>
       </div>
 
