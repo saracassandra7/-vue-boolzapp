@@ -50,24 +50,38 @@
 
       </div>
 
-      <!-- le mie chat -->
-      <div class="my-chats">
-        <!-- cerca nelle chat -->
-        <div class="chat-search">
-          <span class="search-icon">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </span>
-          <input type="text" placeholder="Cerca o inizia una nuova chat">
-        </div>
-        <!-- lista delle chat -->
-        <div class="chat-list">
+      <!-- cerca nelle chat -->
+      <div class="chat-search">
+        <span class="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+        <input type="text" placeholder="Cerca o inizia una nuova chat">
+      </div>
+      
+      <!-- lista delle chat -->
+      <div class="chat-list">
+        <ul>
+          <!-- anteprima chat da modificare e rendere dinamica!!! -->
+          <li>
+            <div class="contact">
+              <img src="img/avatar_2.jpg" alt="nome">
+              <div class="info">
+                <h4>Niccolò</h4>
+                <span>Ultimo messaggio inviato</span>
+              </div>
+            </div>
 
-        </div>
+            <div class="last-seen">
+              <span>12:00</span>
+            </div>
+          </li>
+          
+        </ul>
       </div>
 
     </div>
 
-    <!-- anteprima chat a destra -->
+    <!-- chat aperta a destra -->
     <div class="right">
       <!-- header (destra) -->
       <div class="header header-right">
@@ -92,7 +106,7 @@
       <!-- scrivi un messaggio -->
       <div class="msg-input">
         <i class="fa-regular fa-face-smile"></i>
-        <input type="text">
+        <input type="text" placeholder="Scrivi un messaggio">
         <i class="fa-solid fa-microphone"></i>
       </div>
 
