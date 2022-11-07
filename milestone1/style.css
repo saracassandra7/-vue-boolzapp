@@ -7,3 +7,61 @@
 body{
   font-family: 'Lato', sans-serif;
 }
+
+.container{
+  width: 80vw;
+  height: 95vh;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+
+}
+
+.left{
+  width: 40%;
+  background-color: aqua;
+}
+
+.right{
+  width: 60%;
+  background-color: blueviolet;
+}
+
+.header{
+  background-color: #eaeaea;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-right{
+  border-left: 2px solid lightgray;
+}
+
+.my-account, .icons-left, .opened-chat, .icons-right{
+  padding: 0 12px;
+}
+
+.my-account, .opened-chat{
+  display: flex;
+  align-items: center;
+}
+
+.my-account img, .opened-chat img{
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.icons-left i, .icons-right i {
+  padding: 0 7px;
+  color: #b1b1b1;
+  font-size: 1.2rem;
+}
+
+.opened-chat .name-access span{
+  color: grey;
+  font-size: .75rem;
+}
+

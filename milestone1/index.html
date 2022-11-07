@@ -7,13 +7,59 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <script src="https://unpkg.com/vue@3"></script>
   <link rel="stylesheet" href="style.css">
   <title>Boolzapp</title>
 </head>
 <body>
-  
+  <div class="container">
+    <!-- menu chat a sinistra -->
+    <div class="left">
+      <div class="header header-left">
+        <!-- mio profilo e nome in alto a sinistra -->
+        <div class="my-account">
+          <img src="img/avatar_6.jpg" alt="me">
+          <h4>Sara</h4>
+
+        </div>
+
+        <!-- icone a sinistra -->
+        <div class="icons-left">
+          <i class="fa-light fa-circle-notch"></i>
+          <i class="fa-solid fa-message"></i>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- anteprima chat a destra -->
+    <div class="right">
+      <div class="header header-right">
+        <!-- profilo della persona con chat attiva (dinamico //// da modificare) -->
+        <div class="opened-chat">
+          <img src="img/avatar_1.jpg" alt="Michele">
+          <div class="name-access">
+            <h4>Michele</h4>
+            <span>Ultimo accesso oggi alle 09:05</span>
+          </div>
+        </div>
+
+        <!-- icone a destra -->
+        <div class="icons-right">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-regular fa-paperclip"></i>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
