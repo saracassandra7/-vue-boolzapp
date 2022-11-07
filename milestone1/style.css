@@ -6,6 +6,7 @@
 
 body{
   font-family: 'Lato', sans-serif;
+  background: linear-gradient(#009688 50%, #d9dbd4 50%); /*da aggiustare*/
 }
 
 .container{
@@ -19,14 +20,16 @@ body{
 
 .left{
   width: 40%;
-  background-color: aqua;
+  background-color: white;
 }
 
 .right{
   width: 60%;
-  background-color: blueviolet;
+  background-image: url(img/mine.jpg);
+  position: relative;
 }
 
+/*headers di sinistra e destra*/
 .header{
   background-color: #eaeaea;
   height: 60px;
@@ -54,10 +57,11 @@ body{
   margin-right: 5px;
 }
 
-.icons-left i, .icons-right i {
+.icons-left i, .icons-right i{
   padding: 0 7px;
   color: #b1b1b1;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .opened-chat .name-access span{
@@ -65,3 +69,95 @@ body{
   font-size: .75rem;
 }
 
+/*attiva notifiche desktop*/
+.notification{
+  background-color: #8edafc;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.notification .circle{
+  width:45px;
+  height:45px;
+  border-radius: 50%;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color:#8edafc;
+  font-size: 1.2rem;
+}
+
+.notification .text a{
+  font-size: .85rem;
+  color: #5e91ab;
+}
+
+.notification .text p{
+  font-size: .95rem;
+}
+
+/*le mie chat*/
+.my-chats{
+  display: flex;
+  justify-content: center;
+  background-color: #f1f1f0;
+}
+
+/*cerca nelle chat*/
+.chat-search{
+  display: flex;
+  height: 35px;
+  width: 97%;
+  margin: 5px 0;
+  border: 1px solid rgb(228, 228, 228);
+}
+
+.chat-search .search-icon{
+  height: 100%;
+  background-color: white;
+  color: grey;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid rgb(241, 239, 239);
+}
+
+.chat-search .search-icon i{
+  font-size: .85rem;
+  padding: 0 15px;
+  color: #b1b1b1;
+  cursor: pointer;
+}
+
+.chat-search input{
+  outline:none;
+  border:none;
+  width:90%;
+  padding:8px;
+}
+
+/*scrivi un messaggio*/
+.right .msg-input{
+  height: 60px;
+  width: 100%;
+  background-color: #f3eeea;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right .msg-input i{
+  padding: 0 20px;
+  color: #848c8f;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.right .msg-input input{
+  height: 40px;
+  width: 75%;
+}
