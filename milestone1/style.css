@@ -165,8 +165,15 @@ body{
 }
 
 .info span, .last-seen span{
-  font-size: .9rem;
   color: #b1b1b1;
+}
+
+.info span{
+  font-size: .9rem;
+}
+
+.last-seen span{
+  font-size: .7rem;
 }
 
 
