@@ -181,6 +181,8 @@ body{
 .chat{
   overflow-y: scroll;
   height: calc(100% - 120px);
+  display: flex;
+  flex-direction: column;
 }
 
 .message{
@@ -189,6 +191,7 @@ body{
   border-radius: 8px;
   margin: 10px 5%;
   min-width: 100px;
+  max-width: 75%;
 }
 
 .message span{
@@ -203,12 +206,13 @@ body{
 
 .message.message-sent{
   background-color: #d5f9ba;
-  float: right;
+  align-self: flex-end;
+
 }
 
 .message.message-received{
   background-color: white;
-  float: left;
+  align-self: flex-start;
 }
 
 /*scrivi un messaggio*/
