@@ -167,6 +167,7 @@ createApp({
         }
       ],
       activeChat : 0,
+      newMessage : "",
 
     }
   },
@@ -174,6 +175,17 @@ createApp({
   methods:{
     changeChat(ind){
       this.activeChat = ind;
+    },
+
+    addMessage(){
+      const newMsg = {
+        date: '12:02', // da aggiustare!!!
+        message: this.newMessage,
+        status: 'sent'
+      }
+
+      this.contacts[this.activeChat].messages.push(newMsg)
+      this.newMessage = "";
     }
   }
 

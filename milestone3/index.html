@@ -88,12 +88,13 @@
     <div class="right">
       <!-- header (destra) -->
       <div class="header header-right">
-        <!-- profilo della persona con chat attiva (dinamico //// da modificare) -->
+        <!-- profilo della persona con chat attiva -->
         <div class="opened-chat">
-          <img src="img/avatar_1.jpg" alt="Michele">
+          <img :src="`img/avatar${contacts[activeChat].avatar}.jpg`" alt="">
           <div class="name-access">
-            <h4>Michele</h4>
-            <span>Ultimo accesso oggi alle 09:05</span>
+            <h4>{{contacts[activeChat].name}}</h4>
+            <span>Ultimo accesso oggi alle</span>
+            <!-- <span>Ultimo accesso oggi alle {{contacts[activeChat].messages[activeChat].date}}</span> -->
           </div>
         </div>
 
@@ -120,7 +121,9 @@
       <!-- scrivi un messaggio -->
       <div class="msg-input">
         <i class="fa-regular fa-face-smile"></i>
-        <input type="text" placeholder="Scrivi un messaggio">
+        <input v-model="newMessage" 
+        @keyup.enter="addMessage()"
+        type="text" placeholder="Scrivi un messaggio">
         <i class="fa-solid fa-microphone"></i>
       </div>
     
