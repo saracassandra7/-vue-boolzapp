@@ -169,6 +169,12 @@ createApp({
       activeChat : 0,
 
     }
+  },
+
+  methods:{
+    changeChat(ind){
+      this.activeChat === ind;
+    }
   }
 
 }).mount('#app')

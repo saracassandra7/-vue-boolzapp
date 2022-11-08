@@ -62,7 +62,10 @@
       <div class="chat-list">
         <ul>
 
-          <li v-for="(contact, index) in contacts">
+          <li v-for="(contact, index) in contacts"
+          :class="{'active' : index === activeChat}"
+          @click="changeChat(index)">
+          
             <div class="contact">
               <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
               <div class="info">
