@@ -173,7 +173,7 @@ createApp({
 
   methods:{
     changeChat(ind){
-      this.activeChat === ind;
+      this.activeChat = ind;
     }
   }
 
