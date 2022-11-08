@@ -186,7 +186,23 @@ createApp({
 
       this.contacts[this.activeChat].messages.push(newMsg)
       this.newMessage = "";
+
+      setTimeout(this.autoMessage, 1000)
+    },
+
+    autoMessage(){
+      const autoMsg = {
+        date: '12:03', // da aggiustare
+        message: 'Ok',
+        status: 'received'
+      }
+
+      this.contacts[this.activeChat].messages.push(autoMsg)
+
+      
     }
+
+
   }
 
 }).mount('#app')

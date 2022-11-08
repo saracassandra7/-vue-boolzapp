@@ -186,7 +186,7 @@ body{
 /*chat aperta*/
 .chat{
   overflow-y: scroll;
-  height: calc(100% - 120px);
+  height: calc(100% - 140px);
   display: flex;
   flex-direction: column;
 }
