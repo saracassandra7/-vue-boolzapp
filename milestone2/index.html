@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://unpkg.com/vue@3"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Boolzapp</title>
+</head>
+<body>
+  <div id="app" class="container">
+    <!-- menu chat a sinistra -->
+    <div class="left">
+
+      <!-- header (sinistra) -->
+      <div class="header header-left">
+        <!-- mio profilo e nome in alto a sinistra -->
+        <div class="my-account">
+          <img src="img/avatar_6.jpg" alt="me">
+          <h4>Sara</h4>
+
+        </div>
+
+        <!-- icone a sinistra -->
+        <div class="icons-left">
+          <i class="fas fa-circle-notch"></i>
+          <i class="fa-solid fa-message"></i>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+
+        </div>
+      </div>
+      <!-- / header (sinistra) -->
+
+      <!-- attiva notifiche desktop -->
+      <div class="notification">
+        <div class="circle">
+          <i class="fa-solid fa-bell-slash"></i>
+        </div>
+
+        <div class="text">
+          <p>Ricevi notifiche di nuovi messaggi</p>
+          <a href="#">Attiva notifiche desktop</a>
+        </div>
+
+      </div>
+
+      <!-- cerca nelle chat -->
+      <div class="chat-search">
+        <span class="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+        <input type="text" placeholder="Cerca o inizia una nuova chat">
+      </div>
+      
+      <!-- lista delle chat -->
+      <div class="chat-list">
+        <ul>
+
+          <li v-for="(contact, index) in contacts">
+            <div class="contact">
+              <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
+              <div class="info">
+               <h4>{{contact.name}}</h4>
+               <span>{{contact.messages[contact.messages.length-1].message}}</span>
+              </div>
+            </div>
+
+            <div class="last-seen">
+              <span>{{contact.messages[0].date}}</span>
+            </div>
+
+            
+            
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- chat aperta a destra -->
+    <div class="right">
+      <!-- header (destra) -->
+      <div class="header header-right">
+        <!-- profilo della persona con chat attiva (dinamico //// da modificare) -->
+        <div class="opened-chat">
+          <img src="img/avatar_1.jpg" alt="Michele">
+          <div class="name-access">
+            <h4>Michele</h4>
+            <span>Ultimo accesso oggi alle 09:05</span>
+          </div>
+        </div>
+
+        <!-- icone a destra -->
+        <div class="icons-right">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fas fa-paperclip"></i>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+      </div>
+      <!-- / header (destra) -->
+
+      <!-- chat aperta -->
+      <div class="chat">
+        <div class="message message-sent">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, iure.</p>
+          <span>12:00</span>
+        </div>
+        <div class="message message-sent">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, iure. dcjscsdicjsidn sdi nsidnsinndivjsi</p>
+          <span>12:00</span>
+        </div>
+  
+        <div class="message message-received">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          <span>12:01</span>
+        </div>
+        <div class="message message-received">
+          <p>Lorem </p>
+          <span>12:01</span>
+        </div>
+        
+      </div>
+
+      <!-- scrivi un messaggio -->
+      <div class="msg-input">
+        <i class="fa-regular fa-face-smile"></i>
+        <input type="text" placeholder="Scrivi un messaggio">
+        <i class="fa-solid fa-microphone"></i>
+      </div>
+
+
+    </div>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
