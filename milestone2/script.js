@@ -166,6 +166,7 @@ createApp({
         ],
         }
       ],
+      activeChat : 0,
 
     }
   }

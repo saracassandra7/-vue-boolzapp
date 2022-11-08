@@ -108,23 +108,13 @@
 
       <!-- chat aperta -->
       <div class="chat">
-        <div class="message message-sent">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, iure.</p>
-          <span>12:00</span>
+        <div v-for="messageChat in contacts[activeChat].messages"
+        class="message" 
+        :class ="[messageChat.status == 'sent'? 'message-sent' : 'message-received']">
+          <p>{{messageChat.message}}</p>
+          <span>{{messageChat.date}}</span>
         </div>
-        <div class="message message-sent">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, iure. dcjscsdicjsidn sdi nsidnsinndivjsi</p>
-          <span>12:00</span>
-        </div>
-  
-        <div class="message message-received">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-          <span>12:01</span>
-        </div>
-        <div class="message message-received">
-          <p>Lorem </p>
-          <span>12:01</span>
-        </div>
+       
         
       </div>
 
@@ -135,9 +125,7 @@
         <i class="fa-solid fa-microphone"></i>
       </div>
 
-
-    </div>
-
+    
     </div>
   </div>
   <script src="script.js"></script>
