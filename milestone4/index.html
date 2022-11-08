@@ -93,8 +93,8 @@
           <img :src="`img/avatar${contacts[activeChat].avatar}.jpg`" alt="">
           <div class="name-access">
             <h4>{{contacts[activeChat].name}}</h4>
-            <span>Ultimo accesso oggi alle</span>
-            <!-- <span>Ultimo accesso oggi alle {{contacts[activeChat].messages[activeChat].date}}</span> -->
+            
+            <span>Ultimo accesso oggi alle {{contacts[activeChat].messages[contacts[activeChat].messages.length - 1].date}}</span>
           </div>
         </div>
 
