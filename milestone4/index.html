@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.1.0/luxon.min.js" integrity="sha512-79nhbkASdW5wurW8DtF9Vd7BEDKdTbCKkh87lW6W3tk9T4L9Bc58MzmvRzjMcFCSKpjkoRjwzrTdfOa5lkfJ5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script src="https://unpkg.com/vue@3"></script>
   <link rel="stylesheet" href="style.css">
   <title>Boolzapp</title>
@@ -55,7 +57,8 @@
         <span class="search-icon">
           <i class="fa-solid fa-magnifying-glass"></i>
         </span>
-        <input type="text" placeholder="Cerca o inizia una nuova chat">
+        <input type="text"
+        placeholder="Cerca o inizia una nuova chat">
       </div>
       
       <!-- lista delle chat -->
@@ -75,7 +78,7 @@
             </div>
 
             <div class="last-seen">
-              <span>{{contact.messages[0].date}}</span>
+              <span>{{contacts[activeChat].messages[contacts[activeChat].messages.length - 1].date}}</span>
             </div>
             
           </li>

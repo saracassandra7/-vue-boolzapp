@@ -1,5 +1,9 @@
 const {createApp} = Vue;
 
+const DateTime = luxon.DateTime;
+
+const now = DateTime.now().setLocale('it').toFormat("dd'/'LL'/'yyyy TT");
+
 createApp({
   data(){
     return{
@@ -179,7 +183,7 @@ createApp({
 
     addMessage(){
       const newMsg = {
-        date: '12:02', // da aggiustare!!!
+        date: now,
         message: this.newMessage,
         status: 'sent'
       }
@@ -191,16 +195,15 @@ createApp({
     },
 
     autoMessage(){
+
       const autoMsg = {
-        date: '12:03', // da aggiustare
+        date: now,
         message: 'Ok',
         status: 'received'
       }
 
       this.contacts[this.activeChat].messages.push(autoMsg)
-
-      
-    }
+    },
 
 
   }
