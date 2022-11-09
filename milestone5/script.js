@@ -170,6 +170,14 @@ createApp({
         ],
         }
       ],
+
+      randomResponse: [
+        'Sto dormendo',
+        'Buon Natale a te e famiglia!',
+        'Questa esercitazione ha bruciato i pochi neuroni che mi erano rimasti',
+        'menomale che esiste Vue!',
+        'stasera aperitivo, offri tu!'
+      ],
       activeChat : 0,
       newMessage : "",
       search: "",
@@ -199,7 +207,7 @@ createApp({
 
       const autoMsg = {
         date: now,
-        message: 'Ok',
+        message: this.getRandom(),
         status: 'received'
       }
 
@@ -218,6 +226,11 @@ createApp({
       console.log(this.search);
 
     },
+
+    getRandom(){
+      const response = Math.floor(Math.random()*this.randomResponse.length);
+      return this.randomResponse[response];
+    }
 
   }
 
