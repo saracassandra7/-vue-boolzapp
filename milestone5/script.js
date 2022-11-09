@@ -219,12 +219,6 @@ createApp({
 
     },
 
-    dropdownFunc(){
-      const menu = document.querySelector('.dropdown-content')
-      menu.classList.add('dropdown-active');
-      return menu;
-    }
-
   }
 
 }).mount('#app')
