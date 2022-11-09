@@ -208,7 +208,7 @@ createApp({
 
     searchChat(){
       this.contacts.forEach(contact => {
-        if(contact.name.toLowerCase().includes(this.search)){
+        if(contact.name.toLowerCase().includes(this.search.toLowerCase())){
           contact.visible = true
 
         } else{
