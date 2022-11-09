@@ -57,7 +57,8 @@
         <span class="search-icon">
           <i class="fa-solid fa-magnifying-glass"></i>
         </span>
-        <input type="text"
+        <input type="text" @keyup="searchChat()"
+        v-model="search"
         placeholder="Cerca o inizia una nuova chat">
       </div>
       
@@ -66,6 +67,7 @@
         <ul>
 
           <li v-for="(contact, index) in contacts"
+          v-show="contact.visible"
           :class="{'active' : index === activeChat}"
           @click="changeChat(index)">
           

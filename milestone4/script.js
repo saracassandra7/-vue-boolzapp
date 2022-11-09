@@ -172,6 +172,7 @@ createApp({
       ],
       activeChat : 0,
       newMessage : "",
+      search: "",
 
     }
   },
@@ -205,6 +206,18 @@ createApp({
       this.contacts[this.activeChat].messages.push(autoMsg)
     },
 
+    searchChat(){
+      this.contacts.forEach(contact => {
+        if(contact.name.includes(this.search)){
+          contact.visible = true
+
+        } else{
+          contact.visible = false
+        }
+      });
+      console.log(this.search);
+
+    },
 
   }
 
